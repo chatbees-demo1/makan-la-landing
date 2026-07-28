@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://chatbees-demo1.github.io/makan-la-landing/sitemap.xml
