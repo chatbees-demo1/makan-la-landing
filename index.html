@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- BASE:START (managed by Coding Agent — do not edit) -->
+<base href="/makan-la-landing/">
+<!-- BASE:END -->
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" href="https://my.chatbees.io/objects/quick-uploads/717/866ff57fd6428c8e.png" />
+  
+
+<!-- SEO Meta Tags -->
+<title>Makan.la — Digital Wallet Platform for Restaurant Loyalty, Payments &amp; CRM</title>
+<meta name="description" content="Clean, trust-focused SaaS landing page for Makan.la, the all-in-one digital wallet platform that helps restaurants manage loyalty, payments, and customer data through Apple Wallet and Google Wallet." />
+<meta property="og:title" content="Makan.la — Digital Wallet Platform for Restaurant Loyalty, Payments &amp; CRM" />
+<meta property="og:description" content="Clean, trust-focused SaaS landing page for Makan.la, the all-in-one digital wallet platform that helps restaurants manage loyalty, payments, and customer data through Apple Wallet and Google Wallet." />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Makan.la — Digital Wallet Platform for Restaurant Loyalty, Payments &amp; CRM" />
+<meta name="twitter:description" content="Clean, trust-focused SaaS landing page for Makan.la, the all-in-one digital wallet platform that helps restaurants manage loyalty, payments, and customer data through Apple Wallet and Google Wallet." />
+<!-- End SEO Meta Tags -->
+<script data-lp-token-hydrate>
+(function(){try{
+  var slug="lp-ms4r8v7x-8wwl7";
+  var SK='lp_access_'+slug;
+  var map={access_token:'lp_pw_',allowlist_access_token:'lp_al_',pin_access_token:'lp_pin_',paywall_access_token:'lp_paid_'};
+  var u=new URL(location.href);var found=null;var changed=false;
+  Object.keys(map).forEach(function(p){var v=u.searchParams.get(p);if(v){found=v;try{localStorage.setItem(map[p]+slug,v);}catch(e){}u.searchParams.delete(p);changed=true;}});
+  if(found){try{sessionStorage.setItem(SK,found);}catch(e){}}
+  else{try{if(!sessionStorage.getItem(SK)){var t=localStorage.getItem('lp_pw_'+slug)||localStorage.getItem('lp_al_'+slug)||localStorage.getItem('lp_pin_'+slug)||localStorage.getItem('lp_paid_'+slug);if(t)sessionStorage.setItem(SK,t);}}catch(e){}}
+  if(changed){try{history.replaceState(null,'',u.toString());}catch(e){}}
+  function getTok(){try{return sessionStorage.getItem(SK)||localStorage.getItem('lp_pw_'+slug)||localStorage.getItem('lp_al_'+slug)||localStorage.getItem('lp_pin_'+slug)||localStorage.getItem('lp_paid_'+slug);}catch(e){return null;}}
+  function needsToken(url,method){if(!url)return false;var s=String(url);var m=(method||'GET').toUpperCase();var isSheetWrite=(m==='POST'||m==='PATCH'||m==='PUT'||m==='DELETE')&&/\/sheet-rows(\/|$|\?)/.test(s);var isSheetRead=/\/sheet-data(\/|$|\?)/.test(s);var isLlm=/\/api\/landing-pages\/public\/[^/]+\/(llm|llm-config)(\/|$|\?)/.test(s);return isSheetWrite||isSheetRead||isLlm;}
+  if(window.fetch){var _f=window.fetch;window.fetch=function(input,init){try{var url=typeof input==='string'?input:(input&&input.url)||'';var method=(init&&init.method)||(input&&input.method)||'GET';if(needsToken(url,method)){var tok=getTok();if(tok){init=init||{};var h=new Headers(init.headers||(typeof input!=='string'?input.headers:undefined)||{});if(!h.has('X-Landing-Page-Token'))h.set('X-Landing-Page-Token',tok);init.headers=h;}}}catch(e){}return _f.call(this,input,init);};}
+  if(window.XMLHttpRequest){var _o=XMLHttpRequest.prototype.open;var _s=XMLHttpRequest.prototype.send;XMLHttpRequest.prototype.open=function(m,u){this.__lpM=m;this.__lpU=u;return _o.apply(this,arguments);};XMLHttpRequest.prototype.send=function(){try{if(needsToken(this.__lpU,this.__lpM)){var tok=getTok();if(tok)this.setRequestHeader('X-Landing-Page-Token',tok);}}catch(e){}return _s.apply(this,arguments);};}
+}catch(e){}})();
+</script>
+
+<script data-gate>
+(function(){
+  var slug='lp-ms4r8v7x-8wwl7';var apiBase='https://my.chatbees.io';var currency='USD';var presets=[2500,5000,10000,25000];var minAmt=100;var maxAmt=1000000;var thankYouMsg='Thank you for your generous donation!';
+  var successSubtext='Your donation has been processed successfully.';var successBtnLabel='Continue';var successBtnColor='#16a34a';var successRedirect='';
+  function getLang(){var l=(document.documentElement.lang||navigator.language||'en').toLowerCase();return l.split('-')[0];}
+  function getLocale(){return (document.documentElement.lang||navigator.language||'en');}
+  var I18N={en:{min:'Minimum is ',max:'Maximum is ',emailPrompt:'Enter your email for the receipt:',emailRequired:'An email address is required to complete checkout.',failed:'Failed to process donation'},fr:{min:'Le minimum est ',max:'Le maximum est ',emailPrompt:'Entrez votre adresse e-mail pour le reçu :',emailRequired:'Une adresse e-mail est requise pour finaliser le paiement.',failed:'Échec du traitement du don'},es:{min:'El mínimo es ',max:'El máximo es ',emailPrompt:'Introduce tu correo electrónico para el recibo:',emailRequired:'Se requiere una dirección de correo electrónico para completar el pago.',failed:'No se pudo procesar la donación'},pt:{min:'O mínimo é ',max:'O máximo é ',emailPrompt:'Insira seu e-mail para o recibo:',emailRequired:'Um endereço de e-mail é necessário para concluir o pagamento.',failed:'Falha ao processar a doação'},de:{min:'Mindestbetrag ist ',max:'Höchstbetrag ist ',emailPrompt:'Geben Sie Ihre E-Mail-Adresse für die Quittung ein:',emailRequired:'Eine E-Mail-Adresse ist erforderlich, um den Checkout abzuschließen.',failed:'Spende konnte nicht verarbeitet werden'},it:{min:'Il minimo è ',max:'Il massimo è ',emailPrompt:'Inserisci la tua email per la ricevuta:',emailRequired:"È richiesto un indirizzo email per completare il pagamento.",failed:'Impossibile elaborare la donazione'}};
+  function t(k){var L=getLang();return (I18N[L]&&I18N[L][k])||I18N.en[k];}
+  function fmtD(c){try{return new Intl.NumberFormat(getLocale(),{style:'currency',currency:currency}).format(c/100);}catch(e){return new Intl.NumberFormat('en-US',{style:'currency',currency:currency}).format(c/100);}}
+  function findDonEmail(){var ids=['email','emailAddress','buyer-email','buyerEmail','donor-email','donorEmail','user-email','userEmail','contact-email'];for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value&&el.value.indexOf('@')>-1)return el.value.trim();}var inputs=document.querySelectorAll('input[type="email"],input[name*="email"],input[placeholder*="email"],input[placeholder*="Email"]');for(var j=0;j<inputs.length;j++){if(inputs[j].value&&inputs[j].value.indexOf('@')>-1)return inputs[j].value.trim();}return '';}
+  function findDonName(){var ids=['name','fullName','full-name','donor-name','donorName','customer-name','user-name'];for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value)return el.value.trim();}var inputs=document.querySelectorAll('input[name*="name"]:not([name*="email"]):not([type="email"]),input[placeholder*="name"]:not([placeholder*="email"]):not([type="email"])');for(var j=0;j<inputs.length;j++){if(inputs[j].value)return inputs[j].value.trim();}return '';}
+  function findDonPhone(){var ids=['phone','phoneNumber','phone-number','tel','telephone','mobile','mobileNumber','cell','contact-phone','buyer-phone'];for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value&&el.value.trim())return el.value.trim();}var inputs=document.querySelectorAll('input[type="tel"],input[name*="phone"],input[name*="tel"],input[name*="mobile"],input[placeholder*="phone"],input[placeholder*="Phone"]');for(var j=0;j<inputs.length;j++){if(inputs[j].value&&inputs[j].value.trim())return inputs[j].value.trim();}return '';}
+  window.__processDonation=function(a,b,c,d){
+    var amountCents,email='',donorName='',donorMessage='',productName='',productDescription='',quantity=1;
+    if(a&&typeof a==='object'){
+      amountCents=a.amountCents||(a.amount?Math.round(Number(a.amount)*100):0);
+      email=a.email||'';
+      productName=a.productName||a.label||'';
+      productDescription=a.productDescription||a.description||'';
+      donorName=a.name||a.donorName||'';
+      donorMessage=a.message||a.donorMessage||'';
+      quantity=a.quantity&&parseInt(a.quantity,10)>0?parseInt(a.quantity,10):1;
+    }else{
+      amountCents=typeof a==='number'?a:(parseInt(a,10)||0);
+      var rest=[b,c,d];var nonEmail=[];
+      for(var i=0;i<rest.length;i++){var v=rest[i];if(typeof v==='string'&&v){if(!email&&v.indexOf('@')>-1&&/^[^s@]+@[^s@]+.[^s@]+$/.test(v.trim())){email=v.trim();}else{nonEmail.push(v);}}}
+      donorName=nonEmail[0]||'';donorMessage=nonEmail[1]||'';
+    }
+    if(!email)email=findDonEmail();
+    if(!donorName)donorName=findDonName();
+    var donorPhone=findDonPhone();
+    if(!amountCents||amountCents<minAmt){alert(t('min')+fmtD(minAmt));return Promise.reject('below_min');}
+    if(amountCents>maxAmt){alert(t('max')+fmtD(maxAmt));return Promise.reject('above_max');}
+    if(!email){var p=window.prompt(t('emailPrompt'),'');if(p&&p.indexOf('@')>-1){email=p.trim();}else{alert(t('emailRequired'));return Promise.reject('no_email');}}
+    var successBase=window.location.href.split('?')[0];
+    return fetch(apiBase+'/api/landing-pages/public/'+slug+'/donation/checkout',{
+      method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({email:email,name:donorName||'',phone:donorPhone||'',amountCents:amountCents,message:donorMessage||'',productName:productName||'',productDescription:productDescription||'',quantity:quantity,locale:getLocale(),successUrl:successBase+'?donation=success&email='+encodeURIComponent(email)+'&session_id={CHECKOUT_SESSION_ID}',cancelUrl:successBase+'?donation=cancelled'})
+    }).then(function(r){return r.json();}).then(function(d){
+      if(d.checkoutUrl){window.location.href=d.checkoutUrl;}
+      else{alert(d.error||t('failed'));throw new Error(d.error);}
+    });
+  };
+  window.__donationConfig={currency:currency,presets:presets.map(function(c){return c/100;}),minAmount:minAmt/100,maxAmount:maxAmt/100,formatAmount:fmtD};
+  document.addEventListener('DOMContentLoaded',function(){
+    var urlParams=new URLSearchParams(window.location.search);
+    if(urlParams.get('donation')==='success'){
+      var sidD=urlParams.get('session_id');
+      if(sidD){try{fetch(apiBase+'/api/landing-pages/public/'+slug+'/checkout/confirm',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({sessionId:sidD})}).catch(function(){});}catch(e){}}
+      var overlay=document.createElement('div');overlay.id='donation-success-overlay';
+      overlay.style.cssText='position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.5);display:flex;align-items:center;justify-content:center;z-index:999999;font-family:system-ui,-apple-system,sans-serif;';
+      function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+      overlay.innerHTML='<div style="background:white;border-radius:16px;padding:40px;max-width:420px;width:90%;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,0.15);"><div style="width:64px;height:64px;border-radius:50%;background:#dcfce7;margin:0 auto 20px;display:flex;align-items:center;justify-content:center;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><h2 style="margin:0 0 12px;font-size:24px;font-weight:700;color:#111827;">'+esc(thankYouMsg)+'</h2><p style="margin:0 0 24px;color:#6b7280;font-size:16px;">'+esc(successSubtext)+'</p><button id="lp-don-success-btn" style="padding:12px 32px;font-size:16px;font-weight:600;background:'+successBtnColor+';color:white;border:none;border-radius:8px;cursor:pointer;">'+esc(successBtnLabel)+'</button></div>';
+      document.body.appendChild(overlay);
+      var dBtn=document.getElementById('lp-don-success-btn');
+      if(dBtn){dBtn.addEventListener('click',function(){if(successRedirect){window.location.href=successRedirect;}else{overlay.remove();window.history.replaceState({},'',window.location.pathname);}});}
+    }
+  });
+})();
+</script>
+<script data-field-replace>
+(function(){
+  var params=new URLSearchParams(window.location.search);
+  var fields={};
+  var paramMap={
+    'first_name':'firstName','last_name':'lastName','full_name':'fullName',
+    'email':'email','phone':'phone','company':'company',
+    'city':'city','state':'state','country':'country'
+  };
+  var skipTags={'SCRIPT':1,'STYLE':1,'NOSCRIPT':1,'TEXTAREA':1,'CODE':1,'PRE':1};
+  var hasUrlFields=false;
+  for(var p in paramMap){
+    var v=params.get(p);
+    if(v){fields[paramMap[p]]=v;hasUrlFields=true;}
+  }
+  var contactId=params.get('contact_id');
+  function esc(s){
+    if(!s)return s;
+    var d=document.createElement('div');
+    d.appendChild(document.createTextNode(s));
+    return d.innerHTML;
+  }
+  function doReplace(data){
+    var r={};
+    r['{{full_name}}']=esc(((data.firstName||'')+' '+(data.lastName||'')).trim()||((data.fullName||data.name)||''));
+    r['{{first_name}}']=esc(data.firstName||(data.name?data.name.split(' ')[0]:'')||'');
+    r['{{last_name}}']=esc(data.lastName||(data.name&&data.name.indexOf(' ')>-1?data.name.substring(data.name.indexOf(' ')+1):'')||'');
+    r['{{email}}']=esc(data.email||'');
+    r['{{phone}}']=esc(data.phone||'');
+    r['{{company}}']=esc(data.company||'');
+    r['{{city}}']=esc(data.city||'');
+    r['{{state}}']=esc(data.state||'');
+    r['{{country}}']=esc(data.country||'');
+    r['{{date}}']=new Date().toLocaleDateString();
+    r['{{time}}']=new Date().toLocaleTimeString();
+    r['{{location}}']=[data.city,data.state,data.country].filter(Boolean).join(', ');
+    r['{{tracking_id}}']=esc(data.trackingId||'');
+    r['{{lastClickedProduct}}']=esc(data.lastClickedProduct||'');
+    r['{{lastProductClickDate}}']=esc(data.lastProductClickDate||'');
+    r['{{lastClickedProductPrice}}']=esc(data.lastClickedProductPrice||'');
+    r['{{lastClickedProductURL}}']=esc(data.lastClickedProductURL||'');
+    r['{{productsClickedCount}}']=esc(data.productsClickedCount||'0');
+    r['{{ip_address}}']=esc(data.ipAddress||'');
+    r['{{ip}}']=esc(data.ipAddress||'');
+    if(data.customFields){
+      for(var k in data.customFields){
+        r['{{'+k+'}}']=esc(String(data.customFields[k]||''));
+      }
+    }
+    params.forEach(function(v,k){
+      if(!paramMap[k]&&k!=='contact_id'&&k!=='page_id'&&k.indexOf('utm_')!==0){
+        r['{{'+k+'}}']=esc(v);
+      }
+    });
+    var hasValues=false;
+    for(var key in r){if(r[key]){hasValues=true;break;}}
+    if(!hasValues)return;
+    var walker=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT,{
+      acceptNode:function(n){
+        var p=n.parentNode;
+        if(p&&skipTags[p.nodeName])return NodeFilter.FILTER_REJECT;
+        return NodeFilter.FILTER_ACCEPT;
+      }
+    });
+    var node;
+    while(node=walker.nextNode()){
+      var txt=node.nodeValue;
+      if(txt&&txt.indexOf('{{')>-1){
+        var changed=txt;
+        for(var ph in r){
+          if(r[ph]&&changed.indexOf(ph)>-1){
+            changed=changed.split(ph).join(r[ph]);
+          }
+        }
+        if(changed!==txt)node.nodeValue=changed;
+      }
+    }
+    var attrs=['value','placeholder','content','alt','title'];
+    attrs.forEach(function(attr){
+      var els=document.querySelectorAll('['+attr+'*="{{"]');
+      for(var i=0;i<els.length;i++){
+        var tag=els[i].tagName;
+        if(skipTags[tag])continue;
+        var val=els[i].getAttribute(attr);
+        if(val){
+          var nv=val;
+          for(var ph in r){
+            if(r[ph]&&nv.indexOf(ph)>-1){
+              nv=nv.split(ph).join(r[ph]);
+            }
+          }
+          if(nv!==val)els[i].setAttribute(attr,nv);
+        }
+      }
+    });
+  }
+  function run(){
+    if(contactId){
+      var xhr=new XMLHttpRequest();
+      xhr.open('GET','https://my.chatbees.io/api/landing/context/'+encodeURIComponent(contactId)+'?page_id=5785');
+      xhr.onload=function(){
+        if(xhr.status===200){
+          try{
+            var resp=JSON.parse(xhr.responseText);
+            if(resp.success&&resp.contact){
+              var merged=resp.contact;
+              for(var k in fields){merged[k]=fields[k];}
+              doReplace(merged);
+              return;
+            }
+          }catch(e){}
+        }
+        if(hasUrlFields)doReplace(fields);
+      };
+      xhr.onerror=function(){if(hasUrlFields)doReplace(fields);};
+      xhr.send();
+    }else if(hasUrlFields){
+      doReplace(fields);
+    }
+  }
+  if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',run);}
+  else{run();}
+})();
+</script>
+<script data-payment>
+(function(){
+  var slug='XaSgKvq2';
+  var apiBase='https://my.chatbees.io';
+  var successSubtext='';var successBtnLabel='Continue';var successBtnColor='#16a34a';var successRedirect='';
+  function findEmail(){
+    var ids=['email','emailAddress','buyer-email','buyerEmail','user-email','userEmail','checkout-email','customer-email','contact-email'];
+    for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value&&el.value.includes('@'))return el.value.trim();}
+    var inputs=document.querySelectorAll('input[type="email"],input[name*="email"],input[placeholder*="email"],input[placeholder*="Email"]');
+    for(var j=0;j<inputs.length;j++){if(inputs[j].value&&inputs[j].value.includes('@'))return inputs[j].value.trim();}
+    return '';
+  }
+  function findName(){
+    var ids=['name','fullName','full-name','buyer-name','buyerName','customer-name','userName','user-name'];
+    for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value)return el.value.trim();}
+    var inputs=document.querySelectorAll('input[name*="name"]:not([name*="email"]):not([type="email"]),input[placeholder*="name"]:not([placeholder*="email"]):not([type="email"]),input[placeholder*="Name"]:not([type="email"])');
+    for(var j=0;j<inputs.length;j++){if(inputs[j].value)return inputs[j].value.trim();}
+    return '';
+  }
+  function findPhone(){var ids=['phone','phoneNumber','phone-number','tel','telephone','mobile','mobileNumber','cell','contact-phone','buyer-phone'];for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value&&el.value.trim())return el.value.trim();}var inputs=document.querySelectorAll('input[type="tel"],input[name*="phone"],input[name*="tel"],input[name*="mobile"],input[placeholder*="phone"],input[placeholder*="Phone"]');for(var j=0;j<inputs.length;j++){if(inputs[j].value&&inputs[j].value.trim())return inputs[j].value.trim();}return '';}
+  var __realProcessPayment=function(a,b,c,d,e){
+    var amountCents,email,productName,productDescription,customerName,quantity;
+    if(a&&typeof a==='object'){
+      amountCents=a.amountCents;email=a.email;productName=a.productName;
+      productDescription=a.productDescription||'';customerName=a.name||'';quantity=a.quantity||1;
+    }else{
+      amountCents=typeof a==='number'?a:0;productName=typeof b==='string'?b:'';
+      productDescription=typeof c==='string'?c:'';email='';customerName='';quantity=1;
+    }
+    if(!email)email=findEmail();
+    if(!customerName)customerName=findName();
+    var phone=findPhone();
+    if(!productName){alert('Product name is required.');return Promise.reject('no_product_name');}
+    if(!amountCents||amountCents<100){alert('Amount must be at least $1.00');return Promise.reject('invalid_amount');}
+    if(!email){alert('Please enter your email address.');return Promise.reject('no_email');}
+    var successBase=window.location.href.split('?')[0];
+    var __pLoc=(document.documentElement.lang||navigator.language||'en');
+    return fetch(apiBase+'/api/landing-pages/public/'+slug+'/payment/checkout',{
+      method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({email:email,name:customerName,phone:phone||'',amountCents:amountCents,productName:productName,productDescription:productDescription,quantity:quantity,locale:__pLoc,successUrl:successBase+'?payment=success&product='+encodeURIComponent(productName)+'&session_id={CHECKOUT_SESSION_ID}',cancelUrl:successBase+'?payment=cancelled'})
+    }).then(function(r){return r.json();}).then(function(d){
+      if(d.checkoutUrl){window.location.href=d.checkoutUrl;}
+      else{alert(d.error||'Failed to process payment');throw new Error(d.error);}
+    });
+  };
+  Object.defineProperty(window,'__processPayment',{value:__realProcessPayment,writable:false,configurable:false});
+  document.addEventListener('DOMContentLoaded',function(){
+    var urlParams=new URLSearchParams(window.location.search);
+    if(urlParams.get('payment')==='success'){
+      var sidP=urlParams.get('session_id');
+      if(sidP){try{fetch(apiBase+'/api/landing-pages/public/'+slug+'/checkout/confirm',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({sessionId:sidP})}).catch(function(){});}catch(e){}}
+      var pName=urlParams.get('product')||'your item';
+      var overlay=document.createElement('div');overlay.id='payment-success-overlay';
+      overlay.style.cssText='position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.5);display:flex;align-items:center;justify-content:center;z-index:999999;font-family:system-ui,-apple-system,sans-serif;';
+      function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+      var subTxt=successSubtext||('Thank you for purchasing '+pName+'.');
+      overlay.innerHTML='<div style="background:white;border-radius:16px;padding:40px;max-width:420px;width:90%;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,0.15);"><div style="width:64px;height:64px;border-radius:50%;background:#dcfce7;margin:0 auto 20px;display:flex;align-items:center;justify-content:center;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><h2 style="margin:0 0 12px;font-size:24px;font-weight:700;color:#111827;">Payment Successful!</h2><p style="margin:0 0 24px;color:#6b7280;font-size:16px;">'+esc(subTxt)+'</p><button id="lp-pay-success-btn" style="padding:12px 32px;font-size:16px;font-weight:600;background:'+successBtnColor+';color:white;border:none;border-radius:8px;cursor:pointer;">'+esc(successBtnLabel)+'</button></div>';
+      document.body.appendChild(overlay);
+      var pBtn=document.getElementById('lp-pay-success-btn');
+      if(pBtn){pBtn.addEventListener('click',function(){if(successRedirect){window.location.href=successRedirect;}else{overlay.remove();window.history.replaceState({},'',window.location.pathname);}});}
+    }
+  });
+})();
+</script>
+<script data-cart>
+(function(){
+  var slug='XaSgKvq2';
+  var apiBase='https://my.chatbees.io';
+  var successSubtext='';var successBtnLabel='Continue';var successBtnColor='#16a34a';var successRedirect='';
+  function findCartEmail(){
+    var ids=['email','emailAddress','buyer-email','buyerEmail','user-email','userEmail','checkout-email','customer-email','contact-email'];
+    for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value&&el.value.includes('@'))return el.value.trim();}
+    var inputs=document.querySelectorAll('input[type="email"],input[name*="email"],input[placeholder*="email"],input[placeholder*="Email"]');
+    for(var j=0;j<inputs.length;j++){if(inputs[j].value&&inputs[j].value.includes('@'))return inputs[j].value.trim();}
+    return '';
+  }
+  function findCartName(){
+    var ids=['name','fullName','full-name','buyer-name','buyerName','customer-name','userName','user-name'];
+    for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value)return el.value.trim();}
+    var inputs=document.querySelectorAll('input[name*="name"]:not([name*="email"]):not([type="email"]),input[placeholder*="name"]:not([placeholder*="email"]):not([type="email"]),input[placeholder*="Name"]:not([type="email"])');
+    for(var j=0;j<inputs.length;j++){if(inputs[j].value)return inputs[j].value.trim();}
+    return '';
+  }
+  function findCartPhone(){var ids=['phone','phoneNumber','phone-number','tel','telephone','mobile','mobileNumber','cell','contact-phone','buyer-phone'];for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value&&el.value.trim())return el.value.trim();}var inputs=document.querySelectorAll('input[type="tel"],input[name*="phone"],input[name*="tel"],input[name*="mobile"],input[placeholder*="phone"],input[placeholder*="Phone"]');for(var j=0;j<inputs.length;j++){if(inputs[j].value&&inputs[j].value.trim())return inputs[j].value.trim();}return '';}
+  var __realCart=function(arg){
+    var items, email='', customerName='', successUrl, cancelUrl, currency;
+    if(Array.isArray(arg)){items=arg;}
+    else if(arg&&typeof arg==='object'){
+      items=arg.items;email=arg.email||'';customerName=arg.name||arg.customerName||'';
+      successUrl=arg.successUrl;cancelUrl=arg.cancelUrl;currency=arg.currency;
+    }
+    if(!Array.isArray(items)||items.length===0){alert('No items in cart.');return Promise.reject('no_items');}
+    var cleanItems=[];var totalCents=0;
+    for(var i=0;i<items.length;i++){
+      var it=items[i];if(!it||typeof it!=='object'){alert('Invalid item at position '+i);return Promise.reject('bad_item');}
+      var nm=typeof it.name==='string'?it.name.trim():'';
+      if(!nm){alert('Item '+(i+1)+' is missing a name.');return Promise.reject('no_name');}
+      var amt=typeof it.amountCents==='number'?it.amountCents:(typeof it.amount==='number'?Math.round(it.amount*100):NaN);
+      if(!isFinite(amt)||amt<1){alert('Item "'+nm+'" needs a valid amount in cents.');return Promise.reject('bad_amount');}
+      var qty=(typeof it.quantity==='number'&&it.quantity>0)?Math.floor(it.quantity):1;
+      cleanItems.push({name:nm,description:it.description||'',amountCents:amt,quantity:qty});
+      totalCents+=amt*qty;
+    }
+    if(totalCents<50){alert('Cart total must be at least $0.50');return Promise.reject('total_too_low');}
+    if(!email)email=findCartEmail();
+    if(!customerName)customerName=findCartName();
+    var cartPhone=findCartPhone();
+    if(!email){var p=window.prompt('Enter your email for the receipt:','');if(p&&p.indexOf('@')>-1){email=p.trim();}else{alert('An email address is required to complete checkout.');return Promise.reject('no_email');}}
+    var successBase=window.location.href.split('?')[0];
+    var body={email:email,name:customerName,items:cleanItems,locale:(document.documentElement.lang||navigator.language||'en')};
+    if(currency)body.currency=currency;
+    if(cartPhone)body.phone=cartPhone;
+    body.successUrl=successUrl||(successBase+'?cart=success&email='+encodeURIComponent(email)+'&session_id={CHECKOUT_SESSION_ID}');
+    body.cancelUrl=cancelUrl||(successBase+'?cart=cancelled');
+    return fetch(apiBase+'/api/landing-pages/public/'+slug+'/cart/checkout',{
+      method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify(body)
+    }).then(function(r){return r.json();}).then(function(d){
+      if(d.checkoutUrl){window.location.href=d.checkoutUrl;}
+      else{alert(d.error||'Failed to process checkout');throw new Error(d.error);}
+    });
+  };
+  try{Object.defineProperty(window,'__processCart',{value:__realCart,writable:false,configurable:false});}catch(e){window.__processCart=__realCart;}
+  document.addEventListener('DOMContentLoaded',function(){
+    var urlParams=new URLSearchParams(window.location.search);
+    if(urlParams.get('cart')==='success'){
+      var sidC=urlParams.get('session_id');
+      if(sidC){try{fetch(apiBase+'/api/landing-pages/public/'+slug+'/checkout/confirm',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({sessionId:sidC})}).catch(function(){});}catch(e){}}
+      if(document.getElementById('payment-success-overlay')||document.getElementById('donation-success-overlay')||document.getElementById('cart-success-overlay'))return;
+      var overlay=document.createElement('div');overlay.id='cart-success-overlay';
+      overlay.style.cssText='position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.5);display:flex;align-items:center;justify-content:center;z-index:999999;font-family:system-ui,-apple-system,sans-serif;';
+      function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+      var subTxt=successSubtext||'Thank you for your order.';
+      overlay.innerHTML='<div style="background:white;border-radius:16px;padding:40px;max-width:420px;width:90%;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,0.15);"><div style="width:64px;height:64px;border-radius:50%;background:#dcfce7;margin:0 auto 20px;display:flex;align-items:center;justify-content:center;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><h2 style="margin:0 0 12px;font-size:24px;font-weight:700;color:#111827;">Order Confirmed!</h2><p style="margin:0 0 24px;color:#6b7280;font-size:16px;">'+esc(subTxt)+'</p><button id="lp-cart-success-btn" style="padding:12px 32px;font-size:16px;font-weight:600;background:'+successBtnColor+';color:white;border:none;border-radius:8px;cursor:pointer;">'+esc(successBtnLabel)+'</button></div>';
+      document.body.appendChild(overlay);
+      var cBtn=document.getElementById('lp-cart-success-btn');
+      if(cBtn){cBtn.addEventListener('click',function(){if(successRedirect){window.location.href=successRedirect;}else{overlay.remove();window.history.replaceState({},'',window.location.pathname);}});}
+    }
+  });
+})();
+</script>  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-slate-50 text-slate-900 antialiased">
+  <!-- ============================================================================ -->
+  <!-- SECTION: Navbar                                                               -->
+  <!-- Notes: Logo on the left, quick page links in the center, WhatsApp CTA right   -->
+  <!-- ============================================================================ -->
+  <nav data-section="navbar" class="sticky top-0 z-50 border-b border-slate-200/80 bg-white/90 backdrop-blur">
+    <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
+      <a href="#hero" class="flex items-center gap-3">
+        <img src="https://my.chatbees.io/objects/quick-uploads/717/dba36f8e6af32689.png" alt="Makan.la logo" class="h-10 w-auto sm:h-11" />
+      </a>
+
+      <div class="hidden items-center gap-8 md:flex">
+        <a href="#features" class="text-sm font-medium text-slate-600 transition hover:text-teal-600">Features</a>
+        <a href="#how-it-works" class="text-sm font-medium text-slate-600 transition hover:text-teal-600">How it Works</a>
+        <a href="#contact" class="text-sm font-medium text-slate-600 transition hover:text-teal-600">Contact</a>
+      </div>
+
+      <a href="https://wa.me/60000000000?text=Hi%20Makan.la%2C%20I%27m%20interested%20in%20learning%20more" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-full bg-teal-500 px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-teal-600 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2">
+        <!-- TODO: replace with real WhatsApp number -->
+        <svg viewBox="0 0 32 32" aria-hidden="true" class="h-4 w-4 fill-current">
+          <path d="M19.11 17.35c-.29-.14-1.72-.85-1.99-.95-.27-.1-.47-.14-.67.14-.2.29-.77.95-.94 1.14-.17.2-.35.22-.64.08-.29-.14-1.22-.45-2.32-1.43-.85-.76-1.43-1.69-1.6-1.98-.17-.29-.02-.45.12-.59.12-.12.29-.31.43-.47.14-.16.19-.27.29-.45.1-.18.05-.34-.02-.47-.07-.14-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51l-.57-.01c-.2 0-.51.07-.78.34-.27.29-1.03 1-1.03 2.43s1.05 2.81 1.2 3c.14.2 2.05 3.13 4.97 4.39.7.3 1.24.48 1.67.61.7.22 1.34.19 1.84.12.56-.08 1.72-.7 1.96-1.37.24-.67.24-1.24.17-1.37-.07-.14-.27-.22-.57-.36zM16.03 3C8.82 3 3 8.8 3 16c0 2.33.61 4.58 1.78 6.55L3 29l6.62-1.73A12.9 12.9 0 0 0 16.03 29C23.24 29 29 23.2 29 16S23.24 3 16.03 3zm0 23.6c-2.05 0-4.05-.55-5.8-1.59l-.41-.24-3.93 1.03 1.05-3.82-.27-.42a10.61 10.61 0 0 1-1.65-5.66c0-5.87 4.82-10.65 10.73-10.65 5.91 0 10.73 4.78 10.73 10.65 0 5.88-4.82 10.7-10.45 10.7z"/>
+        </svg>
+        <span>Chat on WhatsApp</span>
+      </a>
+    </div>
+  </nav>
+
+  <main>
+    <!-- ============================================================================ -->
+    <!-- SECTION: Hero                                                                 -->
+    <!-- Notes: Primary value proposition and visual wallet card mockup               -->
+    <!-- ============================================================================ -->
+    <section data-section="hero" id="hero" class="relative overflow-hidden">
+      <div class="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top_left,rgba(26,188,156,.16),transparent_35%),radial-gradient(circle_at_bottom_right,rgba(148,163,184,.22),transparent_30%)]"></div>
+      <div class="mx-auto max-w-7xl px-4 py-14 sm:px-6 sm:py-16 lg:px-8 lg:py-24">
+        <div class="grid items-center gap-14 lg:grid-cols-2">
+          <div class="max-w-2xl">
+            <span class="inline-flex items-center gap-2 rounded-full border border-teal-200 bg-white px-4 py-2 text-sm font-medium text-teal-700 shadow-sm">
+              <img src="https://my.chatbees.io/objects/quick-uploads/717/866ff57fd6428c8e.png" alt="" class="h-5 w-5 rounded-md" />
+              Built for restaurants that want more repeat visits
+            </span>
+            <h1 class="mt-5 text-balance text-4xl font-semibold tracking-tight text-slate-900 sm:text-5xl lg:text-6xl">
+              One Wallet for Loyalty, Payments &amp; Your Customers
+            </h1>
+            <p class="mt-6 max-w-xl text-lg leading-8 text-slate-600">
+              Makan.la replaces paper stamp cards and scattered tools with one digital wallet system restaurants can run everything through — loyalty, payments, and customer data in a single workflow that saves staff time and helps bring diners back more often.
+            </p>
+            <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+              <a href="https://wa.me/60000000000?text=Hi%20Makan.la%2C%20I%27m%20interested%20in%20learning%20more" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 rounded-full bg-teal-500 px-6 py-3.5 text-base font-semibold text-white shadow-lg shadow-teal-500/20 transition hover:bg-teal-600 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2">
+                <!-- TODO: replace with real WhatsApp number -->
+                <svg viewBox="0 0 32 32" aria-hidden="true" class="h-5 w-5 fill-current">
+                  <path d="M19.11 17.35c-.29-.14-1.72-.85-1.99-.95-.27-.1-.47-.14-.67.14-.2.29-.77.95-.94 1.14-.17.2-.35.22-.64.08-.29-.14-1.22-.45-2.32-1.43-.85-.76-1.43-1.69-1.6-1.98-.17-.29-.02-.45.12-.59.12-.12.29-.31.43-.47.14-.16.19-.27.29-.45.1-.18.05-.34-.02-.47-.07-.14-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51l-.57-.01c-.2 0-.51.07-.78.34-.27.29-1.03 1-1.03 2.43s1.05 2.81 1.2 3c.14.2 2.05 3.13 4.97 4.39.7.3 1.24.48 1.67.61.7.22 1.34.19 1.84.12.56-.08 1.72-.7 1.96-1.37.24-.67.24-1.24.17-1.37-.07-.14-.27-.22-.57-.36zM16.03 3C8.82 3 3 8.8 3 16c0 2.33.61 4.58 1.78 6.55L3 29l6.62-1.73A12.9 12.9 0 0 0 16.03 29C23.24 29 29 23.2 29 16S23.24 3 16.03 3zm0 23.6c-2.05 0-4.05-.55-5.8-1.59l-.41-.24-3.93 1.03 1.05-3.82-.27-.42a10.61 10.61 0 0 1-1.65-5.66c0-5.87 4.82-10.65 10.73-10.65 5.91 0 10.73 4.78 10.73 10.65 0 5.88-4.82 10.7-10.45 10.7z"/>
+                </svg>
+                Chat with Sales on WhatsApp
+              </a>
+              <a href="#features" class="inline-flex items-center justify-center rounded-full border border-slate-300 bg-white px-6 py-3.5 text-base font-semibold text-slate-700 shadow-sm transition hover:border-slate-400 hover:bg-slate-50">
+                Explore Features
+              </a>
+            </div>
+            <p class="mt-4 text-sm text-slate-500">No app download required for customers. Works with Apple Wallet and Google Wallet.</p>
+          </div>
+
+          <div class="relative">
+            <div class="mx-auto max-w-md rounded-[2rem] bg-white p-4 shadow-2xl shadow-slate-200/80 ring-1 ring-slate-200">
+              <div class="rounded-[1.7rem] bg-slate-950 p-4 sm:p-5">
+                <div class="flex items-center justify-between text-white">
+                  <div>
+                    <p class="text-xs uppercase tracking-[0.28em] text-teal-300">Makan.la Wallet Pass</p>
+                    <h2 class="mt-1 text-2xl font-semibold">Loyalty Card</h2>
+                  </div>
+                  <img src="https://my.chatbees.io/objects/quick-uploads/717/866ff57fd6428c8e.png" alt="" class="h-10 w-10 rounded-xl border border-white/10 bg-white/5 p-1" />
+                </div>
+
+                <div class="mt-5 rounded-[1.4rem] bg-gradient-to-br from-teal-500 via-teal-500 to-emerald-500 p-5 text-white shadow-lg">
+                  <div class="flex items-center justify-between">
+                    <div>
+                      <p class="text-sm/6 font-medium text-teal-50">Customer rewards</p>
+                      <p class="text-3xl font-semibold">7 / 10</p>
+                    </div>
+                    <div class="grid h-14 w-14 place-items-center rounded-2xl bg-white/15 text-2xl">☕</div>
+                  </div>
+                  <div class="mt-5 grid grid-cols-5 gap-2">
+                    <div class="rounded-xl bg-white/20 py-2 text-center text-sm">✓</div>
+                    <div class="rounded-xl bg-white/20 py-2 text-center text-sm">✓</div>
+                    <div class="rounded-xl bg-white/20 py-2 text-center text-sm">✓</div>
+                    <div class="rounded-xl bg-white/20 py-2 text-center text-sm">✓</div>
+                    <div class="rounded-xl bg-white/20 py-2 text-center text-sm">✓</div>
+                    <div class="rounded-xl bg-white/20 py-2 text-center text-sm">✓</div>
+                    <div class="rounded-xl bg-white/20 py-2 text-center text-sm">✓</div>
+                    <div class="rounded-xl border border-dashed border-white/40 py-2 text-center text-sm">?</div>
+                    <div class="rounded-xl border border-dashed border-white/40 py-2 text-center text-sm">?</div>
+                    <div class="rounded-xl border border-dashed border-white/40 py-2 text-center text-sm">?</div>
+                  </div>
+                </div>
+
+                <div class="mt-4 grid gap-3 sm:grid-cols-2">
+                  <div class="rounded-2xl bg-slate-900 p-4 text-white wallet-slot">
+                    <p class="text-xs uppercase tracking-widest text-slate-400">Visits</p>
+                    <p class="mt-1 text-2xl font-semibold">12</p>
+                  </div>
+                  <div class="rounded-2xl bg-slate-100 p-4 text-slate-900">
+                    <p class="text-xs uppercase tracking-widest text-slate-500">Total spend</p>
+                    <p class="mt-1 text-2xl font-semibold text-teal-600">RM 846</p>
+                  </div>
+                </div>
+                <p class="mt-4 text-sm leading-6 text-slate-300">A simple digital pass that makes earning rewards feel instant, personal, and effortless.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================================ -->
+    <!-- SECTION: Problem / Solution                                                  -->
+    <!-- Notes: Side-by-side contrast between the old way and Makan.la                -->
+    <!-- ============================================================================ -->
+    <section data-section="problem-solution" class="px-4 py-6 sm:px-6 sm:py-10 lg:px-8">
+      <div class="mx-auto max-w-7xl rounded-[2rem] bg-white px-6 py-10 shadow-sm ring-1 ring-slate-200 md:px-8">
+        <div class="max-w-2xl">
+          <h2 class="text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">Still using paper stamp cards?</h2>
+          <p class="mt-4 text-lg text-slate-600">The old way is easy to start, but hard to scale. Makan.la turns every visit into a trackable relationship you can actually grow from.</p>
+        </div>
+
+        <div class="mt-8 grid gap-5 lg:grid-cols-2">
+          <article class="rounded-3xl border border-slate-200 bg-slate-50 p-6">
+            <h3 class="text-lg font-semibold text-slate-900">The old way</h3>
+            <ul class="mt-4 space-y-3 text-slate-600">
+              <li class="flex gap-3"><span class="mt-1 h-2.5 w-2.5 rounded-full bg-slate-400"></span><span>Cards get lost, forgotten, or damaged.</span></li>
+              <li class="flex gap-3"><span class="mt-1 h-2.5 w-2.5 rounded-full bg-slate-400"></span><span>Staff has to remember rules and manually track visits.</span></li>
+              <li class="flex gap-3"><span class="mt-1 h-2.5 w-2.5 rounded-full bg-slate-400"></span><span>No customer data, no visit history, no targeting.</span></li>
+            </ul>
+          </article>
+
+          <article class="rounded-3xl border border-teal-200 bg-teal-50 p-6">
+            <h3 class="text-lg font-semibold text-teal-900">The Makan.la way</h3>
+            <ul class="mt-4 space-y-3 text-teal-900">
+              <li class="flex gap-3"><span class="mt-1 h-2.5 w-2.5 rounded-full bg-teal-500"></span><span>A digital wallet pass that lives on the customer’s phone.</span></li>
+              <li class="flex gap-3"><span class="mt-1 h-2.5 w-2.5 rounded-full bg-teal-500"></span><span>Automatic tracking of visits, rewards, and spend.</span></li>
+              <li class="flex gap-3"><span class="mt-1 h-2.5 w-2.5 rounded-full bg-teal-500"></span><span>Customer insights you can use to bring people back with targeted offers.</span></li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================================ -->
+    <!-- SECTION: Features                                                            -->
+    <!-- Notes: Three core product capabilities with concise restaurant-focused copy  -->
+    <!-- ============================================================================ -->
+    <section data-section="features" id="features" class="px-4 py-10 sm:px-6 lg:px-8">
+      <div class="mx-auto max-w-7xl">
+        <div class="max-w-2xl">
+          <h2 class="text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">Everything a restaurant needs to keep customers coming back</h2>
+          <p class="mt-4 text-lg text-slate-600">From first scan to repeat purchase, Makan.la keeps loyalty, payments, and customer data connected in one system.</p>
+        </div>
+
+        <div class="mt-8 grid gap-5 md:grid-cols-3">
+          <article class="rounded-3xl bg-white p-6 shadow-sm ring-1 ring-slate-200">
+            <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-teal-500 text-white">
+              <svg viewBox="0 0 24 24" class="h-6 w-6 fill-none stroke-current stroke-2" aria-hidden="true">
+                <path d="M4 7h16M7 3v4m10-4v4M6 11h12M6 15h8M6 19h4" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3 class="mt-5 text-xl font-semibold text-slate-900">Loyalty &amp; Rewards</h3>
+            <p class="mt-3 text-slate-600">Punch cards, points, and coupons pushed straight into Apple Wallet and Google Wallet — no app download needed.</p>
+          </article>
+
+          <article class="rounded-3xl bg-white p-6 shadow-sm ring-1 ring-slate-200">
+            <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-teal-500 text-white">
+              <svg viewBox="0 0 24 24" class="h-6 w-6 fill-none stroke-current stroke-2" aria-hidden="true">
+                <path d="M3 7h18v10H3z" stroke-linecap="round" stroke-linejoin="round"/><path d="M7 11h5" stroke-linecap="round"/><path d="M17 11h.01" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3 class="mt-5 text-xl font-semibold text-slate-900">Payments</h3>
+            <p class="mt-3 text-slate-600">Accept payments, track spend, and tie transactions to loyalty automatically so every purchase builds the customer relationship.</p>
+          </article>
+
+          <article class="rounded-3xl bg-white p-6 shadow-sm ring-1 ring-slate-200">
+            <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-teal-500 text-white">
+              <svg viewBox="0 0 24 24" class="h-6 w-6 fill-none stroke-current stroke-2" aria-hidden="true">
+                <path d="M12 13a4 4 0 1 0-4-4" stroke-linecap="round" stroke-linejoin="round"/><path d="M5 20a7 7 0 0 1 14 0" stroke-linecap="round"/><path d="M19 8h2m-1-1v2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3 class="mt-5 text-xl font-semibold text-slate-900">Customer Data &amp; CRM</h3>
+            <p class="mt-3 text-slate-600">Every customer becomes a contact with visit history, spend, and preferences you can use for targeted promotions.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================================ -->
+    <!-- SECTION: How it Works                                                        -->
+    <!-- Notes: Simple 3-step flow for easy scanning on mobile                        -->
+    <!-- ============================================================================ -->
+    <section data-section="how-it-works" id="how-it-works" class="px-4 py-10 sm:px-6 lg:px-8">
+      <div class="mx-auto max-w-7xl rounded-[2rem] bg-slate-900 px-6 py-10 text-white md:px-8">
+        <div class="max-w-2xl">
+          <h2 class="text-3xl font-semibold tracking-tight sm:text-4xl">Simple to launch. Simple for customers.</h2>
+          <p class="mt-4 text-lg text-slate-300">Set it up once, then let Makan.la do the heavy lifting every day after that.</p>
+        </div>
+
+        <div class="mt-8 grid gap-5 lg:grid-cols-3">
+          <article class="rounded-3xl bg-white/5 p-6 ring-1 ring-white/10">
+            <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-teal-500 text-xl font-bold">1</div>
+            <h3 class="mt-5 text-xl font-semibold">Customer scans to join</h3>
+            <p class="mt-3 text-slate-300">A QR code opens the digital wallet pass so customers can join instantly at the counter or table.</p>
+          </article>
+          <article class="rounded-3xl bg-white/5 p-6 ring-1 ring-white/10">
+            <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-teal-500 text-xl font-bold">2</div>
+            <h3 class="mt-5 text-xl font-semibold">Rewards build automatically</h3>
+            <p class="mt-3 text-slate-300">Visits and payments are tracked in the background, so customers earn rewards without extra staff effort.</p>
+          </article>
+          <article class="rounded-3xl bg-white/5 p-6 ring-1 ring-white/10">
+            <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-teal-500 text-xl font-bold">3</div>
+            <h3 class="mt-5 text-xl font-semibold">You send smarter offers</h3>
+            <p class="mt-3 text-slate-300">Use real customer data to send targeted promotions, bring back dormant diners, and reward your regulars.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================================ -->
+    <!-- SECTION: Trust / Why Makan.la                                                -->
+    <!-- Notes: Clear, practical reasons restaurant owners can trust the platform     -->
+    <!-- ============================================================================ -->
+    <section data-section="why-makan-la" class="px-4 py-10 sm:px-6 lg:px-8">
+      <div class="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
+        <div>
+          <h2 class="text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">Why restaurants choose Makan.la</h2>
+          <p class="mt-4 text-lg text-slate-600">Built to reduce friction for your team and make every customer interaction more valuable.</p>
+
+          <ul class="mt-6 space-y-4">
+            <li class="flex gap-3 rounded-2xl bg-white p-4 shadow-sm ring-1 ring-slate-200">
+              <span class="mt-1 h-3 w-3 rounded-full bg-teal-500"></span>
+              <span class="text-slate-700">No app download required for customers — just scan and save the pass.</span>
+            </li>
+            <li class="flex gap-3 rounded-2xl bg-white p-4 shadow-sm ring-1 ring-slate-200">
+              <span class="mt-1 h-3 w-3 rounded-full bg-teal-500"></span>
+              <span class="text-slate-700">Works with Apple Wallet and Google Wallet, so customers use a familiar experience.</span>
+            </li>
+            <li class="flex gap-3 rounded-2xl bg-white p-4 shadow-sm ring-1 ring-slate-200">
+              <span class="mt-1 h-3 w-3 rounded-full bg-teal-500"></span>
+              <span class="text-slate-700">Easy setup designed for restaurants — not generic loyalty software repackaged for hospitality.</span>
+            </li>
+            <li class="flex gap-3 rounded-2xl bg-white p-4 shadow-sm ring-1 ring-slate-200">
+              <span class="mt-1 h-3 w-3 rounded-full bg-teal-500"></span>
+              <span class="text-slate-700">Real-time customer insights help you understand repeat behavior, spending, and preferences.</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="rounded-[2rem] bg-gradient-to-br from-teal-500 to-emerald-500 p-6 text-white shadow-xl">
+          <div class="rounded-[1.6rem] bg-white/10 p-5 ring-1 ring-white/15">
+            <p class="text-sm font-medium uppercase tracking-[0.25em] text-teal-50">Operational value</p>
+            <h3 class="mt-3 text-2xl font-semibold">Less manual work. More repeat revenue.</h3>
+            <p class="mt-4 text-teal-50/95">When loyalty, payment, and CRM live together, your staff spends less time chasing stamp cards and more time serving customers well.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================================ -->
+    <!-- SECTION: Final CTA                                                           -->
+    <!-- Notes: Strong closing call-to-action with WhatsApp as the primary action     -->
+    <!-- ============================================================================ -->
+    <section data-section="cta" class="px-4 py-10 sm:px-6 lg:px-8">
+      <div class="mx-auto max-w-7xl rounded-[2rem] bg-teal-600 px-6 py-12 text-white shadow-xl shadow-teal-600/20 md:px-10">
+        <div class="flex flex-col items-start justify-between gap-8 lg:flex-row lg:items-center">
+          <div class="max-w-2xl">
+            <h2 class="text-3xl font-semibold tracking-tight sm:text-4xl">Ready to turn first-time diners into regulars?</h2>
+            <p class="mt-4 text-lg text-teal-50">Talk to Makan.la on WhatsApp and see how one wallet can connect loyalty, payments, and customer data for your restaurant.</p>
+          </div>
+
+          <a href="https://wa.me/60000000000?text=Hi%20Makan.la%2C%20I%27m%20interested%20in%20learning%20more" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 rounded-full bg-white px-6 py-3.5 text-base font-semibold text-teal-700 shadow-sm transition hover:bg-teal-50 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-teal-600">
+            <!-- TODO: replace with real WhatsApp number -->
+            <svg viewBox="0 0 32 32" aria-hidden="true" class="h-5 w-5 fill-current">
+              <path d="M19.11 17.35c-.29-.14-1.72-.85-1.99-.95-.27-.1-.47-.14-.67.14-.2.29-.77.95-.94 1.14-.17.2-.35.22-.64.08-.29-.14-1.22-.45-2.32-1.43-.85-.76-1.43-1.69-1.6-1.98-.17-.29-.02-.45.12-.59.12-.12.29-.31.43-.47.14-.16.19-.27.29-.45.1-.18.05-.34-.02-.47-.07-.14-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51l-.57-.01c-.2 0-.51.07-.78.34-.27.29-1.03 1-1.03 2.43s1.05 2.81 1.2 3c.14.2 2.05 3.13 4.97 4.39.7.3 1.24.48 1.67.61.7.22 1.34.19 1.84.12.56-.08 1.72-.7 1.96-1.37.24-.67.24-1.24.17-1.37-.07-.14-.27-.22-.57-.36zM16.03 3C8.82 3 3 8.8 3 16c0 2.33.61 4.58 1.78 6.55L3 29l6.62-1.73A12.9 12.9 0 0 0 16.03 29C23.24 29 29 23.2 29 16S23.24 3 16.03 3zm0 23.6c-2.05 0-4.05-.55-5.8-1.59l-.41-.24-3.93 1.03 1.05-3.82-.27-.42a10.61 10.61 0 0 1-1.65-5.66c0-5.87 4.82-10.65 10.73-10.65 5.91 0 10.73 4.78 10.73 10.65 0 5.88-4.82 10.7-10.45 10.7z"/>
+            </svg>
+            Chat with Sales on WhatsApp
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============================================================================ -->
+  <!-- SECTION: Footer                                                              -->
+  <!-- Notes: Minimal footer with logo, tagline, and WhatsApp contact                -->
+  <!-- ============================================================================ -->
+  <footer data-section="footer" id="contact" class="border-t border-slate-200 bg-white">
+    <div class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
+      <div class="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+        <div class="flex items-center gap-4">
+          <img src="https://my.chatbees.io/objects/quick-uploads/717/dba36f8e6af32689.png" alt="Makan.la logo" class="h-10 w-auto" />
+          <p class="max-w-sm text-sm leading-6 text-slate-600">Digital wallet infrastructure for restaurant loyalty, payments, and customer CRM.</p>
+        </div>
+
+        <div class="flex flex-col gap-3 sm:flex-row sm:items-center">
+          <a href="https://wa.me/60000000000?text=Hi%20Makan.la%2C%20I%27m%20interested%20in%20learning%20more" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-full border border-teal-200 bg-teal-50 px-4 py-2.5 text-sm font-semibold text-teal-700 transition hover:bg-teal-100">
+            <!-- TODO: replace with real WhatsApp number -->
+            <svg viewBox="0 0 32 32" aria-hidden="true" class="h-4 w-4 fill-current">
+              <path d="M19.11 17.35c-.29-.14-1.72-.85-1.99-.95-.27-.1-.47-.14-.67.14-.2.29-.77.95-.94 1.14-.17.2-.35.22-.64.08-.29-.14-1.22-.45-2.32-1.43-.85-.76-1.43-1.69-1.6-1.98-.17-.29-.02-.45.12-.59.12-.12.29-.31.43-.47.14-.16.19-.27.29-.45.1-.18.05-.34-.02-.47-.07-.14-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51l-.57-.01c-.2 0-.51.07-.78.34-.27.29-1.03 1-1.03 2.43s1.05 2.81 1.2 3c.14.2 2.05 3.13 4.97 4.39.7.3 1.24.48 1.67.61.7.22 1.34.19 1.84.12.56-.08 1.72-.7 1.96-1.37.24-.67.24-1.24.17-1.37-.07-.14-.27-.22-.57-.36zM16.03 3C8.82 3 3 8.8 3 16c0 2.33.61 4.58 1.78 6.55L3 29l6.62-1.73A12.9 12.9 0 0 0 16.03 29C23.24 29 29 23.2 29 16S23.24 3 16.03 3zm0 23.6c-2.05 0-4.05-.55-5.8-1.59l-.41-.24-3.93 1.03 1.05-3.82-.27-.42a10.61 10.61 0 0 1-1.65-5.66c0-5.87 4.82-10.65 10.73-10.65 5.91 0 10.73 4.78 10.73 10.65 0 5.88-4.82 10.7-10.45 10.7z"/>
+            </svg>
+            WhatsApp Sales
+          </a>
+          <p class="text-sm text-slate-500">© 2026 Makan.la</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp CTA -->
+  <a href="https://wa.me/60000000000?text=Hi%20Makan.la%2C%20I%27m%20interested%20in%20learning%20more" target="_blank" rel="noopener noreferrer" aria-label="Chat with Makan.la on WhatsApp" class="fixed bottom-4 right-4 z-50 grid h-14 w-14 place-items-center rounded-full bg-teal-500 text-white shadow-xl shadow-teal-500/30 transition hover:bg-teal-600 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2 sm:bottom-6 sm:right-6">
+    <!-- TODO: replace with real WhatsApp number -->
+    <svg viewBox="0 0 32 32" aria-hidden="true" class="h-7 w-7 fill-current">
+      <path d="M19.11 17.35c-.29-.14-1.72-.85-1.99-.95-.27-.1-.47-.14-.67.14-.2.29-.77.95-.94 1.14-.17.2-.35.22-.64.08-.29-.14-1.22-.45-2.32-1.43-.85-.76-1.43-1.69-1.6-1.98-.17-.29-.02-.45.12-.59.12-.12.29-.31.43-.47.14-.16.19-.27.29-.45.1-.18.05-.34-.02-.47-.07-.14-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51l-.57-.01c-.2 0-.51.07-.78.34-.27.29-1.03 1-1.03 2.43s1.05 2.81 1.2 3c.14.2 2.05 3.13 4.97 4.39.7.3 1.24.48 1.67.61.7.22 1.34.19 1.84.12.56-.08 1.72-.7 1.96-1.37.24-.67.24-1.24.17-1.37-.07-.14-.27-.22-.57-.36zM16.03 3C8.82 3 3 8.8 3 16c0 2.33.61 4.58 1.78 6.55L3 29l6.62-1.73A12.9 12.9 0 0 0 16.03 29C23.24 29 29 23.2 29 16S23.24 3 16.03 3zm0 23.6c-2.05 0-4.05-.55-5.8-1.59l-.41-.24-3.93 1.03 1.05-3.82-.27-.42a10.61 10.61 0 0 1-1.65-5.66c0-5.87 4.82-10.65 10.73-10.65 5.91 0 10.73 4.78 10.73 10.65 0 5.88-4.82 10.7-10.45 10.7z"/>
+    </svg>
+  </a>
+</body>
+</html>
