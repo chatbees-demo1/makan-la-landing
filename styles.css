@@ -1,0 +1,6 @@
+/* ===== BASE STYLES ===== */
+    /* Small custom touches that Tailwind can't express as cleanly */
+    :root { color-scheme: light; }
+    .text-balance { text-wrap: balance; }
+    .glass-card { backdrop-filter: blur(10px); }
+    .wallet-slot { box-shadow: inset 0 1px 0 rgba(255,255,255,.15); }
